@@ -73,6 +73,21 @@ A criptografia assimétrica propõe um modelo de solução para este problema. Cada 
 
 O chaveiro criptográfico em tem como funções a proteção das chaves privadas, a importação de chaves públicas alheias, revogação de chaves comprometidas e configuração do nível de confiança. Sendo a camada responsável por estas tarefas, está fortemente ligado à facilidade de uso das chaves pelo usuário final. O chaveiro desempenha a função crucial de proteção das chaves privadas por meio de senha. A solução adotada em implementações como o GnuPG cria um chaveiro na estação de trabalho do usuário durante a instalação, que pode então ser usado diretamente por meio de linha de comando ou acessado por através de bibliotecas específicas por softwares de terceiros.
 
+\section{USO DO PGP PARA CRIPTOGRAFIA} \label{sec:usopgpcripto}
+
+PGP é uma família de softwares da área de segurança desenvolvidos inicialmente por Philip R. Zimmermann [REF12] e liberada como um freeware em 1991. Essa liberação foi motivo de processos movidos pelo Governo dos Estados Unidos sob a acusação da ferir as leis de exportação de tecnologia criptográfica vigentes. O caso foi encerrado em 1996 sem prejuízo à Zimmermann [REF17].Foi então fundada a PGP Inc - mais tarde PGP Corp - com o objetivo de manter essa tecnologia. Esta empresa foi adquirida em 2010 pela Symantec e sua versão gratuita  deixou de ser oferecida.
+
+Tendo como base esta experiência foi desenvolvido o padrão OpenPGP, que contém a mesma proposta de criptografia por meio de chaves assimétricas, uma pública e outra privada, mas agora com uma especificação publicada na RFC 4880 - OpenPGP Message Format. A publicação desta especificação permitiu o nascimento de implementações abertas. A mais conhecida para desktop é a GNUPG, ou simplesmente GPG, tanto que, por vezes, os termos PGP e GPG são usados de forma intercambiável.
+
+PGP permite criptografar e assinar mensagens trocadas entre duas pessoas utilizando tecnologia de chaves assimétricas, sendo uma de finalidade pública e outra privada.
+
+Esse formato de comunicação estabelece o sigilo da mensagem e o não-repúdio [REF7] - incapacidade de uma das partes de negar que assinou a mensagem se, de fato, o fez -  da mensagem, tudo isso mantendo as chaves privadas - o recurso que guarda o poder de assinar e, portanto, de identificação - em sigilo.
+
+Essa tecnologia encontrou um forte caso de uso nas trocas de e-mail, impedindo que a interceptação das mensagens comprometesse seu sigilo e, que um terceiro pudesse se passar por um dos interlocutores de forma despercebida ou, ainda, que um dos interlocutores mais tarde negasse que ele assinou a mensagem.
+
+Outro uso facilmente identificável é na assinatura de arquivos. Dado que uma assinatura precisa da senha do chaveiro do usuário somada à posse da chave privada ela pode ser usada com propósitos legais na assinatura de documentos digitais.
+GPG está disponível para todos os grandes sistemas operacionais, de estações desktop até celulares e várias bibliotecas permitem desenvolvimento sobre esta tecnologia.
+
 \section{First Page} \label{sec:firstpage}
 
 The first page must display the paper title, the name and address of the
