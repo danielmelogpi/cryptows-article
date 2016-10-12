@@ -10,45 +10,45 @@ I was expecting a `,' or a `}'---line 237 of file sbc-template.bib
 I'm skipping whatever remains of this entry
 Warning--empty year in carmocriptografia
 Warning--empty journal in carmocriptografia
-You've used 15 entries,
+You've used 17 entries,
             1935 wiz_defined-function locations,
-            561 strings with 6259 characters,
-and the built_in function-call counts, 5549 in all, are:
-= -- 562
-> -- 216
-< -- 15
-+ -- 80
-- -- 72
-* -- 404
-:= -- 984
-add.period$ -- 52
-call.type$ -- 15
-change.case$ -- 111
-chr.to.int$ -- 15
-cite$ -- 17
-duplicate$ -- 228
-empty$ -- 364
-format.name$ -- 89
-if$ -- 1091
+            573 strings with 6642 characters,
+and the built_in function-call counts, 6335 in all, are:
+= -- 649
+> -- 236
+< -- 18
++ -- 86
+- -- 78
+* -- 455
+:= -- 1112
+add.period$ -- 60
+call.type$ -- 17
+change.case$ -- 124
+chr.to.int$ -- 17
+cite$ -- 19
+duplicate$ -- 265
+empty$ -- 421
+format.name$ -- 99
+if$ -- 1258
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 83
-num.names$ -- 45
-pop$ -- 96
+missing$ -- 9
+newline$ -- 94
+num.names$ -- 51
+pop$ -- 107
 preamble$ -- 1
-purify$ -- 111
+purify$ -- 124
 quote$ -- 0
-skip$ -- 180
+skip$ -- 211
 stack$ -- 0
-substring$ -- 329
-swap$ -- 38
-text.length$ -- 5
+substring$ -- 385
+swap$ -- 48
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
+type$ -- 102
 warning$ -- 2
-while$ -- 45
+while$ -- 52
 width$ -- 0
-write$ -- 200
+write$ -- 228
 (There was 1 error message)

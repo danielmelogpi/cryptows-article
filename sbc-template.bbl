@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Akram and Ko 2014]{akram2014end}
+Akram, R.~N. and Ko, R.~K. (2014).
+\newblock End-to-end secure and privacy preserving mobile chat application.
+\newblock In {\em IFIP International Workshop on Information Security Theory
+  and Practice}, pages 124--139. Springer.
+
 \bibitem[Busleiman 2007]{modAuthMainPage}
 Busleiman, A.~B. (2007).
 \newblock Apache {OpenPGP Support}.
@@ -26,13 +32,6 @@ Diffie, W. (1988).
 \newblock The first ten years of public-key cryptography.
 \newblock {\em Proceedings of the IEEE}, 76(5):560--577.
 
-\bibitem[Higa 2014]{whatsappCriptoSera}
-Higa, P. (2014).
-\newblock Whatsapp usa criptografia de ponta a ponta para suas mensagens no
-  android.
-\newblock \url{http://www.securiteam.com/tools/5HP0220LFU.html}.
-\newblock Accessado em: 2016-10-10.
-
 \bibitem[Lehtonen and Parssinen 2002]{lehtonen2002pattern}
 Lehtonen, S. and Parssinen, J. (2002).
 \newblock Pattern language for cryptographic key management.
@@ -51,6 +50,12 @@ Naylor, D., Finamore, A., Leontiadis, I., Grunenberger, Y., Mellia, M.,
 \newblock The cost of the s in https.
 \newblock In {\em Proceedings of the 10th ACM International on Conference on
   emerging Networking Experiments and Technologies}, pages 133--140. ACM.
+
+\bibitem[{Open KeyChain About Page} 2016]{openKeyChainAbout}
+{Open KeyChain About Page} (2016).
+\newblock About.
+\newblock \url{https://www.openkeychain.org/about/}.
+\newblock Accessado em: 2016-10-10.
 
 \bibitem[Rushe 2013]{rushe2013google}
 Rushe, D. (2013).
@@ -81,6 +86,13 @@ Symantec (2015).
 \newblock Whitepaper - keeping your private data secure.
 \newblock
   \url{https://www.symantec.com/content/dam/symantec/docs/white-papers/keeping-your-private-data-secure-en.pdf}.
+\newblock Accessado em: 2016-10-10.
+
+\bibitem[{The Guardiam} 2014]{whatsappCriptoSera}
+{The Guardiam} (2014).
+\newblock Whatsapp adds end-to-end encryption using textsecure.
+\newblock
+  \url{https://www.theguardian.com/technology/2014/nov/19/whatsapp-messaging-encryption-android-ios}.
 \newblock Accessado em: 2016-10-10.
 
 \bibitem[Zimmermann 1996]{zimmCaseDropped}

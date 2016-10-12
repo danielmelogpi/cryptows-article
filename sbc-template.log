@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.9)  12 OCT 2016 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.9)  12 OCT 2016 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -81,6 +81,9 @@ Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \titlewidthlast=\dimen118
 \titlewidthfirst=\dimen119
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -123,19 +126,19 @@ File: latin1.def 2015/03/17 v1.2c Input encoding file
 )) (./sbc-template.aux)
 \openout1 = `sbc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -231,103 +234,111 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 25.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 25.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspcr.fd
-File: omspcr.fd 
-)
-LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+(Font)              <6> on input line 30.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
- [1
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 1546) in paragraph at lines 65--66
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1546) in paragraph at lines 70--71
 \OT1/ptm/m/n/12 a importa[][]ao de chaves p[]ublicas al-heias, revoga[][]ao de 
 chaves com-pro-meti-das e
  []
 
-
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
- [3]
-[4] [5] <diagramarede.png, id=25, 795.97375pt x 394.47375pt>
+[2] [3] [4] [5] [6] <diagramarede.png, id=26, 660.4675pt x 344.28625pt>
 File: diagramarede.png Graphic file (type png)
 
 <use diagramarede.png>
-Package pdftex.def Info: diagramarede.png used on input line 154.
-(pdftex.def)             Requested size: 384.1096pt x 190.35646pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 155.
+Package pdftex.def Info: diagramarede.png used on input line 163.
+(pdftex.def)             Requested size: 384.1096pt x 200.23251pt.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 164.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 155.
- [6]
-<encript.png, id=30, 595.22375pt x 605.26125pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 164.
+ [7 <./diagramarede.png>] <encript.png, id=34, 595.22375pt x 469.755pt>
 File: encript.png Graphic file (type png)
  <use encript.png>
-Package pdftex.def Info: encript.png used on input line 169.
-(pdftex.def)             Requested size: 341.43437pt x 347.1913pt.
+Package pdftex.def Info: encript.png used on input line 179.
+(pdftex.def)             Requested size: 384.1096pt x 303.14377pt.
 
-<decript.png, id=31, 538.26094pt x 451.6875pt>
+<decript.png, id=35, 442.65375pt x 371.13657pt>
 File: decript.png Graphic file (type png)
  <use decript.png>
-Package pdftex.def Info: decript.png used on input line 183.
-(pdftex.def)             Requested size: 298.75264pt x 250.70331pt.
- [7 <./diagramarede.png>] [8 <./encript.png>] (./sbc-template.bbl [9 <./decript
-.png>]
-Underfull \hbox (badness 2521) in paragraph at lines 67--72
+Package pdftex.def Info: decript.png used on input line 196.
+(pdftex.def)             Requested size: 384.1096pt x 322.07071pt.
+ [8 <./encript.png>] <senha-alice.png, id=40, 339.2675pt x 418.56375pt>
+File: senha-alice.png Graphic file (type png)
+
+<use senha-alice.png>
+Package pdftex.def Info: senha-alice.png used on input line 205.
+(pdftex.def)             Requested size: 213.39568pt x 263.26863pt.
+ [9 <./decript.png> <./senha-alice.png>]
+(./sbc-template.bbl
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 12.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+[10
+
+]
+Underfull \hbox (badness 2521) in paragraph at lines 72--77
 \OT1/pcr/m/n/12 com / security / 3-[]pillars-[]information-[]security$\OT1/ptm/
 m/n/12 .  Ac-ces-sado em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
 \OT1/pcr/m/n/12 www . symantec . com / content / dam / symantec / docs / white-
 []papers /
  []
 
-) [10] (./sbc-template.aux) ) 
+
+Underfull \hbox (badness 5231) in paragraph at lines 92--97
+[]\OT1/ptm/m/n/12 The Guardiam (2014).  What-sapp adds end-to-end en-cryp-tion 
+us-ing textse-
+ []
+
+
+Underfull \hbox (badness 2922) in paragraph at lines 92--97
+\OT1/ptm/m/n/12 cure.  $\OT1/pcr/m/n/12 https : / / www . theguardian . com / t
+echnology / 2014 / nov / 19 /
+ []
+
+) [11] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
- 2742 strings out of 494929
- 38975 string characters out of 6180142
- 106458 words of memory out of 5000000
- 5984 multiletter control sequences out of 15000+600000
- 21548 words of font info for 46 fonts, out of 8000000 for 9000
+ 2745 strings out of 494929
+ 39096 string characters out of 6180142
+ 105437 words of memory out of 5000000
+ 5986 multiletter control sequences out of 15000+600000
+ 20526 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 37i,8n,28p,743b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,28p,795b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (10 pages, 283215 bytes).
+></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sbc-template.pdf (11 pages, 274543 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
