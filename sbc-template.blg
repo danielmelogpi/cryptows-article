@@ -3,47 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: sbc-template.aux
 The style file: sbc.bst
 Database file #1: sbc-template.bib
+I was expecting a `,' or a `}'---line 237 of file sbc-template.bib
+ :   
+ :   note = {Accessado em: 2016-10-10}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty year in carmocriptografia
 Warning--empty journal in carmocriptografia
-You've used 12 entries,
+You've used 14 entries,
             1935 wiz_defined-function locations,
-            547 strings with 5915 characters,
-and the built_in function-call counts, 4796 in all, are:
-= -- 480
-> -- 195
-< -- 12
-+ -- 74
-- -- 66
-* -- 359
-:= -- 833
-add.period$ -- 41
-call.type$ -- 12
-change.case$ -- 93
-chr.to.int$ -- 12
-cite$ -- 14
-duplicate$ -- 198
-empty$ -- 319
-format.name$ -- 80
-if$ -- 952
+            557 strings with 6140 characters,
+and the built_in function-call counts, 5295 in all, are:
+= -- 534
+> -- 209
+< -- 14
++ -- 78
+- -- 70
+* -- 389
+:= -- 933
+add.period$ -- 48
+call.type$ -- 14
+change.case$ -- 105
+chr.to.int$ -- 14
+cite$ -- 16
+duplicate$ -- 218
+empty$ -- 349
+format.name$ -- 86
+if$ -- 1044
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 8
-newline$ -- 66
-num.names$ -- 36
-pop$ -- 89
+newline$ -- 77
+num.names$ -- 42
+pop$ -- 94
 preamble$ -- 1
-purify$ -- 93
+purify$ -- 105
 quote$ -- 0
-skip$ -- 153
+skip$ -- 171
 stack$ -- 0
-substring$ -- 293
+substring$ -- 317
 swap$ -- 38
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 84
 warning$ -- 2
-while$ -- 39
+while$ -- 43
 width$ -- 0
-write$ -- 160
-(There were 2 warnings)
+write$ -- 186
+(There was 1 error message)

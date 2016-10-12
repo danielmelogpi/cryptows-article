@@ -1,5 +1,16 @@
 \begin{thebibliography}{}
 
+\bibitem[Busleiman 2007]{modAuthMainPage}
+Busleiman, A.~B. (2007).
+\newblock Apache {OpenPGP Support}.
+\newblock \url{http://www.securiteam.com/tools/5HP0220LFU.html}.
+\newblock Accessado em: 2016-10-10.
+
+\bibitem[Busleiman 2016]{enigformMainPage}
+Busleiman, A.~B. (2016).
+\newblock Enigform project main page.
+\newblock \url{http://enigform.mozdev.org/}.
+
 \bibitem[Callas et~al. 2007]{RFC4880}
 Callas, J., Donnerhacke, L., Finney, H., Shaw, D., and Thayer, R. (2007).
 \newblock Openpgp message format.
