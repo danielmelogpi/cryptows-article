@@ -44,35 +44,36 @@ Um dos grandes desafios das aplicações modernas está na sua capacidade de manter
 Um recurso voltado para essas necessidades é a criptografia, capacidade de mascarar uma mensagem de tal forma que somente seja legível pelo destinatário. Também traz a possibilidade de assinar digitalmente os conteúdos das mensagens, sendo possível verificar posteriormente quem assinou e se o conteúdo não sofreu alteração depois disso.
 O uso crescente de ferramentas sociais para comunicação entre as pessoas em ambientes diversificados traz a necessidade da garantia de privacidade de forma efetiva e fácil de usar.
 
-Apesar do uso de tais técnicas de segurança ser conhecido há muitos anos [REF3] (com a criptografia datando de 1900 A.C[REF9] e a criptografia assimétrica de 1975 [REF2] ) - ele ainda é de difícil compreensão e uso para usuários finais. Visto que a facilidade de uso precede uma adoção em massa de qualquer tecnologia [REF4], existe necessidade de desenvolver formas mais simples de uso para potencializar ações de segurança da informação.
+Apesar do uso de tais técnicas de segurança ser conhecido há muitos anos \cite{pastPresentFutureCripto} (com a criptografia datando de 1900 A.C \cite{pastPresentFutureCripto} e a criptografia assimétrica de 1975 \cite{diffie1988first} ) - ele ainda é de difícil compreensão e uso para usuários finais. Visto que a facilidade de uso precede uma adoção em massa de qualquer tecnologia \cite{sweikata2009usability}, existe necessidade de desenvolver formas mais simples de uso para potencializar ações de segurança da informação.
 
 Este artigo faz uma análise do uso atual de criptografia de chaves assimétricas com PGP para troca de mensagens em algumas ferramentas e propõe um formato simplificado da gestão dos recursos privados usando webservices criptográficos oferecidos em dispositivos móveis. O objetivo principal é simplificar seu uso pelo usuário final e potencializar o uso de criptografia fim a fim.
 
 \section{LIMITAÇÕES DE COMUNICAÇÃO SEM CRIPTOGRAFIA FIM A FIM} \label{sec:limitsemcriptofimafim}
-A criptografia fim a fim é definida pela implementação de técnicas que garantam que somente o remetente e o destinatário tem acesso às mensagens trocadas, sendo computacionalmente inviável que alguém leia as mensagens, seja por meio de interceptação, seja por acesso indevido aos dispositivos físicos envolvidos. Esse tipo de criptografia não tem sido historicamente desenvolvida com foco no usuário final [REF5].
+A criptografia fim a fim é definida pela implementação de técnicas que garantam que somente o remetente e o destinatário tem acesso às mensagens trocadas, sendo computacionalmente inviável que alguém leia as mensagens, seja por meio de interceptação, seja por acesso indevido aos dispositivos físicos envolvidos. Esse tipo de criptografia não tem sido historicamente desenvolvida com foco no usuário final \cite{sheng2006johnny}.
 
-Parte significativa da confidencialidade na troca de mensagens reside atualmente na criptografia das mensagens em trânsito através da rede. Isso é feito usando algum protocolo baseado em SSL/TLS, sigla para os padrões Secure Socket Layer e Transport Layer Security [REF6]. São exemplos o HTTPS, SMTPS, para troca de hipertexto e e-mail, respectivamente. Essa estratégia busca proteger as partes envolvidas de ataques contra o sigilo das mensagens, uma vez que o conteúdo interceptado de forma indevida durante o trânsito se torna inelegível para o atacante. Também torna computacionalmente complexo introduzir nas mensagens conteúdo não legítimo.
+Parte significativa da confidencialidade na troca de mensagens reside atualmente na criptografia das mensagens em trânsito através da rede. Isso é feito usando algum protocolo baseado em SSL/TLS, sigla para os padrões Secure Socket Layer e Transport Layer Security \cite{naylor2014cost}. São exemplos o HTTPS, SMTPS, para troca de hipertexto e e-mail, respectivamente. Essa estratégia busca proteger as partes envolvidas de ataques contra o sigilo das mensagens, uma vez que o conteúdo interceptado de forma indevida durante o trânsito se torna inelegível para o atacante. Também torna computacionalmente complexo introduzir nas mensagens conteúdo não legítimo.
 
-Apesar da elevada proteção contra interceptação, estes meios não buscam resolver o problema de somente o remetente e o destinatário da mensagem poderem lê-la. No caso de provedores de e-mail comerciais, como o Gmail, Yahoo Mail e Outlook Mail o mantenedor do serviço ainda tem acesso ao conteúdo das mensagens à revelia da vontade de sigilo do usuário[REF8]. Cria-se a necessidade de confiar no provedor de e-mail para trocar uma mensagem sigilosa, o que não é suficiente em contextos sensíveis.
+Apesar da elevada proteção contra interceptação, estes meios não buscam resolver o problema de somente o remetente e o destinatário da mensagem poderem lê-la. No caso de provedores de e-mail comerciais, como o Gmail, Yahoo Mail e Outlook Mail o mantenedor do serviço ainda tem acesso ao conteúdo das mensagens à revelia da vontade de sigilo do usuário\cite{rushe2013google}. Cria-se a necessidade de confiar no provedor de e-mail para trocar uma mensagem sigilosa, o que não é suficiente em contextos sensíveis.
 
 A criptografia assimétrica propõe um modelo de solução para este problema. Cada usuário gera um par de chaves criptográficas, sendo uma de propósito privado e a outra pública. A chave privada é usada para assinar e descriptografar as mensagens. A chave pública, por sua vez é usada para verificar assinaturas e criptografar as mensagens, que só poderão ser lidas por quem possuir a chave privada equivalente. Isso cria um mecanismo onde somente o destinatário pode ler as mensagens, promovendo a confidencialidade. Além disso, a capacidade de assinatura provê o recurso de não-repúdio e integridade da comunicação. Se esses recursos forem empregados na troca de mensagens temos um exemplo de criptografia fim a fim.
 
-O chaveiro criptográfico em tem como funções a proteção das chaves privadas, a importação de chaves públicas alheias, revogação de chaves comprometidas e configuração do nível de confiança. Sendo a camada responsável por estas tarefas, está fortemente ligado à facilidade de uso das chaves pelo usuário final. O chaveiro desempenha a função crucial de proteção das chaves privadas por meio de senha. A solução adotada em implementações como o GnuPG cria um chaveiro na estação de trabalho do usuário durante a instalação, que pode então ser usado diretamente por meio de linha de comando ou acessado por através de bibliotecas específicas por softwares de terceiros.
+O chaveiro criptográfico tem como funções a proteção das chaves privadas, a importação de chaves públicas alheias, revogação de chaves comprometidas e configuração do nível de confiança. Sendo a camada responsável por estas tarefas, está fortemente ligado à facilidade de uso das chaves pelo usuário final. O chaveiro desempenha a função crucial de proteção das chaves privadas por meio de senha. A solução adotada em implementações como o GnuPG cria um chaveiro na estação de trabalho do usuário durante a instalação, que pode então ser usado diretamente por meio de linha de comando ou acessado por através de bibliotecas específicas por softwares de terceiros.
 
 \section{USO DO PGP PARA CRIPTOGRAFIA} \label{sec:usopgpcripto}
 
-PGP é uma família de softwares da área de segurança desenvolvidos inicialmente por Philip R. Zimmermann [REF12] e liberada como um freeware em 1991. Essa liberação foi motivo de processos movidos pelo Governo dos Estados Unidos sob a acusação da ferir as leis de exportação de tecnologia criptográfica vigentes. O caso foi encerrado em 1996 sem prejuízo à Zimmermann [REF17].Foi então fundada a PGP Inc - mais tarde PGP Corp - com o objetivo de manter essa tecnologia. Esta empresa foi adquirida em 2010 pela Symantec e sua versão gratuita  deixou de ser oferecida.
+PGP é uma família de softwares da área de segurança desenvolvidos inicialmente por Philip R. Zimmermann \cite{carmocriptografia} e liberada como um freeware em 1991. Essa liberação foi motivo de processos movidos pelo Governo dos Estados Unidos sob a acusação da ferir as leis de exportação de tecnologia criptográfica vigentes. O caso foi encerrado em 1996 sem prejuízo à Zimmermann \cite{zimmCaseDropped}.Foi então fundada a PGP Inc - mais tarde PGP Corp - com o objetivo de manter essa tecnologia. Esta empresa foi adquirida em 2010 pela Symantec e sua versão gratuita  deixou de ser oferecida.
 
 Tendo como base esta experiência foi desenvolvido o padrão OpenPGP, que contém a mesma proposta de criptografia por meio de chaves assimétricas, uma pública e outra privada, mas agora com uma especificação publicada na RFC 4880 - OpenPGP Message Format. A publicação desta especificação permitiu o nascimento de implementações abertas. A mais conhecida para desktop é a GNUPG, ou simplesmente GPG, tanto que, por vezes, os termos PGP e GPG são usados de forma intercambiável.
 
 PGP permite criptografar e assinar mensagens trocadas entre duas pessoas utilizando tecnologia de chaves assimétricas, sendo uma de finalidade pública e outra privada.
 
-Esse formato de comunicação estabelece o sigilo da mensagem e o não-repúdio [REF7] - incapacidade de uma das partes de negar que assinou a mensagem se, de fato, o fez -  da mensagem, tudo isso mantendo as chaves privadas - o recurso que guarda o poder de assinar e, portanto, de identificação - em sigilo.
+Esse formato de comunicação estabelece o sigilo da mensagem e o não-repúdio \cite{lehtonen2002pattern} - incapacidade de uma das partes de negar que assinou a mensagem se, de fato, o fez -  da mensagem, tudo isso mantendo as chaves privadas - o recurso que guarda o poder de assinar e, portanto, de identificação - em sigilo.
 
 Essa tecnologia encontrou um forte caso de uso nas trocas de e-mail, impedindo que a interceptação das mensagens comprometesse seu sigilo e, que um terceiro pudesse se passar por um dos interlocutores de forma despercebida ou, ainda, que um dos
 interlocutores mais tarde negasse que ele assinou a mensagem.
 
 Outro uso facilmente identificável é na assinatura de arquivos. Dado que uma assinatura precisa da senha do chaveiro do usuário somada à posse da chave privada ela pode ser usada com propósitos legais na assinatura de documentos digitais.
+
 GPG está disponível para todos os grandes sistemas operacionais, de estações desktop até celulares e várias bibliotecas permitem desenvolvimento sobre esta tecnologia.
 
 \section{AVALIAÇÃO DE FORMAS DE ACESSO AO CHAVEIRO PGP} \label{sec:avaliausochaveiropgp}
@@ -80,19 +81,19 @@ GPG está disponível para todos os grandes sistemas operacionais, de estações des
 A seguir, são feitas avaliações de formas e metodologias de acesso aos chaveiros PGP, suas dependências e considerações a respeito da facilidade de uso pelo usuário final.
 
 \subsection{PGP - PRETTY GOOD PRIVACY}
-Hoje o PGP compõe a suite de soluções corporativas da Symantec servindo como opção de criptografia em seus produtos [REF 12 e 13]. Tais produtos compõem um ecossistema de softwares com foco na centralização dos recursos privados, como as chaves dos usuários, o que tira do usuário individual a posse sobre a sua chave, sua ativação e desativação, em prol da facilidade para o administrador da infraestrutura corporativa.
+Hoje o PGP compõe a suite de soluções corporativas da Symantec servindo como opção de criptografia em seus produtos \cite{symantecWhiteKeepingDataSecure}. Tais produtos compõem um ecossistema de softwares com foco na centralização dos recursos privados, como as chaves dos usuários, o que tira do usuário individual a posse sobre a sua chave, sua ativação e desativação, em prol da facilidade para o administrador da infraestrutura corporativa.
 
 O fato de estas ferramentas somente estarem disponíveis dentro de uma grande suíte corporativa as torna financeiramente inacessíveis às aos indivíduos que desejam proteger suas comunicações e documentos digitais particulares. O fator financeiro, portanto, se torna uma barreira quanto à estes produtos. A adoção de ferramentas livres possivelmente terá mais potencial de adoção, visto o custo envolvido.
 
 \subsection{GNUPG}
 
-O GNU PG é uma implementação da RFC 4880 [REF-10], entitulada OpenPGP Message Format, que permite a geração e uso das chaves privadas em interface de linha de comando. Essa é a principal implementação do formato em uso atualmente, vindo instalada por padrão em várias distribuições linux. Também está disponível para Microsoft Windows por meio da suite Gpg4win.
+O GNU PG é uma implementação da RFC4880 \cite{RFC4880}, entitulada OpenPGP Message Format, que permite a geração e uso das chaves privadas em interface de linha de comando. Essa é a principal implementação do formato em uso atualmente, vindo instalada por padrão em várias distribuições linux. Também está disponível para Microsoft Windows por meio da suite Gpg4win.
 
 Essa implementação é de interesse de quem deseja aprender com mais detalhes como se dá o uso das chaves, sua criação e as diferentes opções de configuração que estão disponíveis nas diversas operações previstas pela especificação. Isso pode ser visto na capacidade de suporte à diversos algoritmos de criptografia, como DSA, RSA, AES, 3DES, Blowfish, Twofish, CAST5, MD5, SHA-1, RIPE-MD-160 e TIGER. Também comporta a adição de novos algoritmos por meio de extensões personalizadas.
 
 \subsection{MOD\_AUTH\_OPENPGP E ENIGFORM}
 
-A extensão Enigform [REF15] para firefox busca adicionar uma nova camada de segurança sobre as requisições HTTP assinando-as digitalmente com os recursos do chaveiro do usuário. O servidor então pode verificar a validade dessas assinaturas por meio do uso do seu próprio chaveiro, através da extensão mod\_auth\_openpgp [REF16].
+A extensão Enigform \cite{enigformMainPage} para firefox busca adicionar uma nova camada de segurança sobre as requisições HTTP assinando-as digitalmente com os recursos do chaveiro do usuário. O servidor então pode verificar a validade dessas assinaturas por meio do uso do seu próprio chaveiro, através da extensão mod\_auth\_openpgp \cite{modAuthMainPage}.
 
 Isso provê uma capacidade de autenticação dentro da própria comunicação estabelecida entre a aplicação cliente e o servidor, já que requisições sem assinatura ou com assinaturas geradas por chaves desconhecidas seriam facilmente identificáveis e poderiam ser adequadamente tratadas.
 
@@ -174,7 +175,7 @@ A requisição deve usar o cabeçalho x-operation com o valor decrypt-message e o c
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=.8\textwidth]{decript.png}
+\includegraphics[width=.7\textwidth]{decript.png}
 \caption{Exemplo de uma mensagem PGP sendo descriptografada de volta à forma legível.}
 \label{fig:exampleFig4}
 \end{figure}

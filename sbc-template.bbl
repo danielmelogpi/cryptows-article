@@ -1,10 +1,74 @@
 \begin{thebibliography}{}
 
+\bibitem[Callas et~al. 2007]{RFC4880}
+Callas, J., Donnerhacke, L., Finney, H., Shaw, D., and Thayer, R. (2007).
+\newblock Openpgp message format.
+\newblock RFC 4880, RFC Editor.
+\newblock \url{http://www.rfc-editor.org/rfc/rfc4880.txt}.
+
+\bibitem[Carmo et~al. ]{carmocriptografia}
+Carmo, F.~J., Lemes, P.~A., and Freitas, T.~H.
+\newblock Criptografia e {PGP}.
+
+\bibitem[Diffie 1988]{diffie1988first}
+Diffie, W. (1988).
+\newblock The first ten years of public-key cryptography.
+\newblock {\em Proceedings of the IEEE}, 76(5):560--577.
+
+\bibitem[Lehtonen and Parssinen 2002]{lehtonen2002pattern}
+Lehtonen, S. and Parssinen, J. (2002).
+\newblock Pattern language for cryptographic key management.
+\newblock In {\em EuroPLoP}, pages 245--258.
+
+\bibitem[McDonald 2009]{pastPresentFutureCripto}
+McDonald, N.~G. (2009).
+\newblock Past, present, and future methods of cryptography and data
+  encryption.
+\newblock {\em Department of Electrical and Computer Engineering, University of
+  Utah}.
+
+\bibitem[Naylor et~al. 2014]{naylor2014cost}
+Naylor, D., Finamore, A., Leontiadis, I., Grunenberger, Y., Mellia, M.,
+  Munaf{\`o}, M., Papagiannaki, K., and Steenkiste, P. (2014).
+\newblock The cost of the s in https.
+\newblock In {\em Proceedings of the 10th ACM International on Conference on
+  emerging Networking Experiments and Technologies}, pages 133--140. ACM.
+
+\bibitem[Rushe 2013]{rushe2013google}
+Rushe, D. (2013).
+\newblock Google: don{'}t expect privacy when sending to gmail.
+\newblock {\em The Guardian. Retrieved Dec}, 19:2014.
+
+\bibitem[Sheng et~al. 2006]{sheng2006johnny}
+Sheng, S., Broderick, L., Koranda, C.~A., and Hyland, J.~J. (2006).
+\newblock Why johnny still can{'}t encrypt: evaluating the usability of email
+  encryption software.
+\newblock In {\em Symposium On Usable Privacy and Security}, pages 3--4.
+
 \bibitem[Smith 2005]{pillarsOfSecutiry}
 Smith, R.~F. (2005).
 \newblock The 3 pillars of information security.
 \newblock \url{http://windowsitpro.com/security/3-pillars-information-security
   }.
-\newblock Accessed: 2016-10-10.
+\newblock Accessado em: 2016-10-10.
+
+\bibitem[Sweikata et~al. 2009]{sweikata2009usability}
+Sweikata, M., Watson, G., Frank, C., Christensen, C., and Hu, Y. (2009).
+\newblock The usability of end user cryptographic products.
+\newblock In {\em 2009 Information Security Curriculum Development Conference},
+  pages 55--59. ACM.
+
+\bibitem[Symantec 2015]{symantecWhiteKeepingDataSecure}
+Symantec (2015).
+\newblock Whitepaper - keeping your private data secure.
+\newblock
+  \url{https://www.symantec.com/content/dam/symantec/docs/white-papers/keeping-your-private-data-secure-en.pdf}.
+\newblock Accessado em: 2016-10-10.
+
+\bibitem[Zimmermann 1996]{zimmCaseDropped}
+Zimmermann, P.~R. (1996).
+\newblock Significant moments in pgp's history: Zimmermann case dropped.
+\newblock \url{http://philzimmermann.com/EN/news/PRZ_case_dropped.html}.
+\newblock Accessado em: 2016-10-10.
 
 \end{thebibliography}
