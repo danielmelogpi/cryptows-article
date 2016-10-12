@@ -1,3 +1,4 @@
+rm sbc-template.pdf
 rm sbc-template.aux; 
 pdflatex sbc-template.tex
 bibtex sbc-template

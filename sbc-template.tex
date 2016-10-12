@@ -11,13 +11,13 @@
 
 \title{Uso de Webservices Criptográficos a \\partir de Dispositivos Móveis\\  }
 
-\author{Daniel Melo\inst{1}}
+\author{Daniel Melo\inst{1}, Marcelo Akira Inuzuka\inst{1}}
 
 
 \address{Instituto de Informática -- Universidade Federal de Goiás
 \\Alameda Palmeiras, Quadra D, Câmpus Samambaia
-\\CEP 74690-900 -- Goiânia -- GO -- Brasil
-\email{danielmelo@inf.ufg.br}
+\\CEP 74.690-900 -- Goiânia -- GO -- Brasil
+\email{\{danielmelo,marceloakira\}@inf.ufg.br}
 }
 
 \begin{document}
@@ -38,17 +38,19 @@
 
 
 \section{INTRODUÇÃO} \label{sec:introducao}
-
-Um dos grandes desafios das aplicações modernas está na sua capacidade de manter a segurança dos dados de seus usuários. Um dos pilares da segurança da informação é a confidencialidade, que é manter aquilo que é privado acessível somente a quem é de direito, identificando de forma inequívoca as partes envolvidas e suas ações no seu sistema de informação. Outro conceito importante é o da integridade, que busca afirmar com precisão se determinado conteúdo se mantém sem modificações inapropriadas\cite{pillarsOfSecutiry}.
+O uso crescente de ferramentas sociais para comunicação entre as pessoas em ambientes diversificados traz a necessidade da garantia de privacidade de forma efetiva e fácil de usar.
 
 Um recurso voltado para essas necessidades é a criptografia, capacidade de mascarar uma mensagem de tal forma que somente seja legível pelo destinatário. Também traz a possibilidade de assinar digitalmente os conteúdos das mensagens, sendo possível verificar posteriormente quem assinou e se o conteúdo não sofreu alteração depois disso.
 O uso crescente de ferramentas sociais para comunicação entre as pessoas em ambientes diversificados traz a necessidade da garantia de privacidade de forma efetiva e fácil de usar.
 
 Apesar do uso de tais técnicas de segurança ser conhecido há muitos anos \cite{pastPresentFutureCripto} (com a criptografia datando de 1900 A.C \cite{pastPresentFutureCripto} e a criptografia assimétrica de 1975 \cite{diffie1988first} ) - ele ainda é de difícil compreensão e uso para usuários finais. Visto que a facilidade de uso precede uma adoção em massa de qualquer tecnologia \cite{sweikata2009usability}, existe necessidade de desenvolver formas mais simples de uso para potencializar ações de segurança da informação.
 
-Este artigo faz uma análise do uso atual de criptografia de chaves assimétricas com PGP para troca de mensagens em algumas ferramentas e propõe um formato simplificado da gestão dos recursos privados usando webservices criptográficos oferecidos em dispositivos móveis. O objetivo principal é simplificar seu uso pelo usuário final e potencializar o uso de criptografia fim a fim.
+Este artigo faz uma análise do uso atual de criptografia de chaves assimétricas utilizando o software GnuPG, que segue o padrão PGP, para troca de mensagens em algumas ferramentas e propõe um formato simplificado da gestão dos recursos privados usando webservices criptográficos oferecidos em dispositivos móveis. O objetivo principal é simplificar seu uso pelo usuário final e potencializar o uso de criptografia fim a fim.
 
 \section{LIMITAÇÕES DE COMUNICAÇÃO SEM CRIPTOGRAFIA FIM A FIM} \label{sec:limitsemcriptofimafim}
+
+Um dos grandes desafios dos sistemas operacionais modernos está na sua capacidade de manter a segurança dos dados de seus usuários. Um dos pilares da segurança da informação é a confidencialidade, que é manter aquilo que é privado acessível somente a quem é de direito, identificando de forma inequívoca as partes envolvidas e suas ações no seu sistema de informação. Outro conceito importante é o da integridade, que busca afirmar com precisão se determinado conteúdo se mantém sem modificações inapropriadas\cite{pillarsOfSecutiry}.
+
 A criptografia fim a fim é definida pela implementação de técnicas que garantam que somente o remetente e o destinatário tem acesso às mensagens trocadas, sendo computacionalmente inviável que alguém leia as mensagens, seja por meio de interceptação, seja por acesso indevido aos dispositivos físicos envolvidos. Esse tipo de criptografia não tem sido historicamente desenvolvida com foco no usuário final \cite{sheng2006johnny}.
 
 Parte significativa da confidencialidade na troca de mensagens reside atualmente na criptografia das mensagens em trânsito através da rede. Isso é feito usando algum protocolo baseado em SSL/TLS, sigla para os padrões Secure Socket Layer e Transport Layer Security \cite{naylor2014cost}. São exemplos o HTTPS, SMTPS, para troca de hipertexto e e-mail, respectivamente. Essa estratégia busca proteger as partes envolvidas de ataques contra o sigilo das mensagens, uma vez que o conteúdo interceptado de forma indevida durante o trânsito se torna inelegível para o atacante. Também torna computacionalmente complexo introduzir nas mensagens conteúdo não legítimo.
