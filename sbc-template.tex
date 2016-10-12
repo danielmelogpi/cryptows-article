@@ -83,10 +83,64 @@ PGP permite criptografar e assinar mensagens trocadas entre duas pessoas utiliza
 
 Esse formato de comunicação estabelece o sigilo da mensagem e o não-repúdio [REF7] - incapacidade de uma das partes de negar que assinou a mensagem se, de fato, o fez -  da mensagem, tudo isso mantendo as chaves privadas - o recurso que guarda o poder de assinar e, portanto, de identificação - em sigilo.
 
-Essa tecnologia encontrou um forte caso de uso nas trocas de e-mail, impedindo que a interceptação das mensagens comprometesse seu sigilo e, que um terceiro pudesse se passar por um dos interlocutores de forma despercebida ou, ainda, que um dos interlocutores mais tarde negasse que ele assinou a mensagem.
+Essa tecnologia encontrou um forte caso de uso nas trocas de e-mail, impedindo que a interceptação das mensagens comprometesse seu sigilo e, que um terceiro pudesse se passar por um dos interlocutores de forma despercebida ou, ainda, que um dos
+interlocutores mais tarde negasse que ele assinou a mensagem.
 
 Outro uso facilmente identificável é na assinatura de arquivos. Dado que uma assinatura precisa da senha do chaveiro do usuário somada à posse da chave privada ela pode ser usada com propósitos legais na assinatura de documentos digitais.
 GPG está disponível para todos os grandes sistemas operacionais, de estações desktop até celulares e várias bibliotecas permitem desenvolvimento sobre esta tecnologia.
+
+\section{AVALIAÇÃO DE FORMAS DE ACESSO AO CHAVEIRO PGP} \label{sec:avaliausochaveiropgp}
+
+A seguir, são feitas avaliações de formas e metodologias de acesso aos chaveiros PGP, suas dependências e considerações a respeito da facilidade de uso pelo usuário final.
+
+\subsection{PGP - PRETTY GOOD PRIVACY}
+Hoje o PGP compõe a suite de soluções corporativas da Symantec servindo como opção de criptografia em seus produtos [REF 12 e 13]. Tais produtos compõem um ecossistema de softwares com foco na centralização dos recursos privados, como as chaves dos usuários, o que tira do usuário individual a posse sobre a sua chave, sua ativação e desativação, em prol da facilidade para o administrador da infraestrutura corporativa.
+
+O fato de estas ferramentas somente estarem disponíveis dentro de uma grande suíte corporativa as torna financeiramente inacessíveis às aos indivíduos que desejam proteger suas comunicações e documentos digitais particulares. O fator financeiro, portanto, se torna uma barreira quanto à estes produtos. A adoção de ferramentas livres possivelmente terá mais potencial de adoção, visto o custo envolvido.
+
+\subsection{GNUPG}
+
+O GNU PG é uma implementação da RFC 4880 [REF-10], entitulada OpenPGP Message Format, que permite a geração e uso das chaves privadas em interface de linha de comando. Essa é a principal implementação do formato em uso atualmente, vindo instalada por padrão em várias distribuições linux. Também está disponível para Microsoft Windows por meio da suite Gpg4win.
+
+Essa implementação é de interesse de quem deseja aprender com mais detalhes como se dá o uso das chaves, sua criação e as diferentes opções de configuração que estão disponíveis nas diversas operações previstas pela especificação. Isso pode ser visto na capacidade de suporte à diversos algoritmos de criptografia, como DSA, RSA, AES, 3DES, Blowfish, Twofish, CAST5, MD5, SHA-1, RIPE-MD-160 e TIGER. Também comporta a adição de novos algoritmos por meio de extensões personalizadas.
+
+\subsection{MOD\_AUTH\_OPENPGP E ENIGFORM}
+
+A extensão Enigform [REF15] para firefox busca adicionar uma nova camada de segurança sobre as requisições HTTP assinando-as digitalmente com os recursos do chaveiro do usuário. O servidor então pode verificar a validade dessas assinaturas por meio do uso do seu próprio chaveiro, através da extensão mod\_auth\_openpgp [REF16].
+
+Isso provê uma capacidade de autenticação dentro da própria comunicação estabelecida entre a aplicação cliente e o servidor, já que requisições sem assinatura ou com assinaturas geradas por chaves desconhecidas seriam facilmente identificáveis e poderiam ser adequadamente tratadas.
+
+Essa iniciativa ainda se encontra em desenvolvimento e com a proposta de RFC em elaboração. Apesar disso, a proposta adiciona uma facilidade de uso interessante paras as comunicações baseadas em HTTP: é possível arquitetar aplicações de tal forma que seções de conteúdo restrito e/ou sensível possam ser disponibilizados sem autenticação por meio de formulários ou logins integrados à outras plataformas.
+
+O investimento neste tipo de estratégia tem potencial para uso em ferramentas de comunicação corporativas e acadêmicas. Note-se, porém, que não lida com o mascaramento da informação em trânsito, uma vez que se limita ao escopo de autenticação via assinatura por chave privada.
+
+Um outro empecilho é a necessidade de instalação de um plugin em cada estação de trabalho, que obrigatoriamente deve ter o Mozilla Firefox. Essa ferramenta também depende de as chaves serem transportadas entre as estações pelo próprio usuário e disponibilizadas de forma correta em seus discos-rígidos.
+
+\subsection{ENIGMAIL}
+O Enigmail é um plugin desenvolvido para o cliente de e-mail Mozilla Thunderbird. Este plugin estende as capacidades do Thunderbird dando-lhe a capacidade de encriptar, desencriptar, assinar e verificar assinatura de e-mails. O recurso padrão para estas operações é o padrão PGP, através de uma implementação aberta, o GNU PG.
+
+Para correto funcionamento do Enigmail deve ser feita a instalação do chaveiro GNU PG e do Thunderbird. Em seguida, o chaveiro local deve ser configurado dentro do plugin. Depois disso é possível realizar as operações citadas com as mensagens, provendo sigilo e confirmação da autoria das mensagens, além de operações sobre o próprio chaveiro, como criação de novas chaves, importação de chaves públicas, modificação do nível de confiança atribuido à chaves públicas de terceiros.
+
+O formato de uso do Enigmail é seguido por diversas outras ferramentas que buscam simplificar o uso da tecnologia PGP na comunicação, como o Evolution, Claws Mail e extensões como o WebPG para Firefox. Elas servem como clientes do chaveiro instalado localmente e traduzem as suas operações para uma interface gráfica familiar ao usuário.
+
+Um ponto comum de dificuldade entre todas elas é a necessidade de lidar com os chaveiros pelas múltiplas estações de trabalho, como notado na avaliação do Enigform na seção anterior.
+
+
+\section{AVALIAÇÃO DA EXPERIÊNCIA DE CHAVEIROS PGP} \label{sec:avaliaexperienciapgp}
+
+Todas as aplicações analisadas tinham em comum o uso de chaveiros instalados localmente, com as chaves fisicamente guardadas na pasta do usuário. Este modelo existe de forma tradicional e serve bem para usuários que operam de uma mesma estação para as suas atividades cotidianas e não precisam de mobilidade.
+
+A experiência de software contemporânea, entretanto, tem mudado. Com a adoção de computadores em vários ambientes visitados ao longo do dia e o uso crescente de dispositivos móveis nos últimos anos ficou ainda mais complexa a manutenção do chaveiro pessoal. Uma tecnologia que já não via grande adoção sofre agora com mais uma barreira de uso para o usuário final.
+
+Além dessa dificuldade os serviços hospedados remotamente e disponibilizados através do navegador não conseguem acessar o chaveiro GPG do usuário. Essas aplicações remotas são uma parte essencial da experiência informatizada das pessoas e deveriam gozar dos mesmo nível de proteção dados à mensagens de e-mail tradicionais.
+
+Observando esta dificuldade, este trabalho propõe uma experiência com o chaveiro capaz de se tornar mais pessoal e, ao mesmo tempo, contribuir com a mobilidade desses recursos de segurança junto com o próprio deslocamento físico do usuário.
+
+
+\section{PROPOSTA DE CHAVEIRO PESSOAL MÓVEL VIA WEBSERVICE} \label{sec:proposta}
+
+
+
 
 \section{First Page} \label{sec:firstpage}
 
