@@ -37,8 +37,11 @@
 \end{resumo}
 
 
-\section{INTRODUÇÃO} \label{sec:introducao}
+\section{Introdução} \label{sec:introducao}
 O uso crescente de ferramentas sociais para comunicação entre as pessoas em ambientes diversificados traz a necessidade da garantia de privacidade de forma efetiva e fácil de usar.
+
+Ferramentas de comunicação tem alcançado grande público e compõem uma parte importante da troca de mensagens. Um exemplo atual é o Whatsapp, que conta com mais de 600 milhões de usuários. A ferramenta promete privacidade total nas versões mais recentes, dotadas de criptografia fim a fim, segundo a empresa \cite{whatsappCriptoSera}. É, entretanto, muito difícil ter controle sobre a veracidade dessa afirmação, visto não ser este um aplicativo de código aberto. Sem a possibilidade de verificar o que é, de fato, realizado pela aplicação o controle sobre as pontas não está nas mãos dos usuários.
+
 
 Um recurso voltado para essas necessidades é a criptografia, capacidade de mascarar uma mensagem de tal forma que somente seja legível pelo destinatário. Também traz a possibilidade de assinar digitalmente os conteúdos das mensagens, sendo possível verificar posteriormente quem assinou e se o conteúdo não sofreu alteração depois disso.
 O uso crescente de ferramentas sociais para comunicação entre as pessoas em ambientes diversificados traz a necessidade da garantia de privacidade de forma efetiva e fácil de usar.
@@ -47,11 +50,11 @@ Apesar do uso de tais técnicas de segurança ser conhecido há muitos anos \cite{p
 
 Este artigo faz uma análise do uso atual de criptografia de chaves assimétricas utilizando o software GnuPG, que segue o padrão PGP, para troca de mensagens em algumas ferramentas e propõe um formato simplificado da gestão dos recursos privados usando webservices criptográficos oferecidos em dispositivos móveis. O objetivo principal é simplificar seu uso pelo usuário final e potencializar o uso de criptografia fim a fim.
 
-\section{LIMITAÇÕES DE COMUNICAÇÃO SEM CRIPTOGRAFIA FIM A FIM} \label{sec:limitsemcriptofimafim}
-
-Um dos grandes desafios dos sistemas operacionais modernos está na sua capacidade de manter a segurança dos dados de seus usuários. Um dos pilares da segurança da informação é a confidencialidade, que é manter aquilo que é privado acessível somente a quem é de direito, identificando de forma inequívoca as partes envolvidas e suas ações no seu sistema de informação. Outro conceito importante é o da integridade, que busca afirmar com precisão se determinado conteúdo se mantém sem modificações inapropriadas\cite{pillarsOfSecutiry}.
+\section{Desafios da Criptografia Fim a Fim} \label{sec:limitsemcriptofimafim}
 
 A criptografia fim a fim é definida pela implementação de técnicas que garantam que somente o remetente e o destinatário tem acesso às mensagens trocadas, sendo computacionalmente inviável que alguém leia as mensagens, seja por meio de interceptação, seja por acesso indevido aos dispositivos físicos envolvidos. Esse tipo de criptografia não tem sido historicamente desenvolvida com foco no usuário final \cite{sheng2006johnny}.
+
+Um dos grandes desafios dos sistemas operacionais modernos está na sua capacidade de manter a segurança dos dados de seus usuários. Um dos pilares da segurança da informação é a confidencialidade, que é manter aquilo que é privado acessível somente a quem é de direito, identificando de forma inequívoca as partes envolvidas e suas ações no seu sistema de informação. Outro conceito importante é o da integridade, que busca afirmar com precisão se determinado conteúdo se mantém sem modificações inapropriadas\cite{pillarsOfSecutiry}.
 
 Parte significativa da confidencialidade na troca de mensagens reside atualmente na criptografia das mensagens em trânsito através da rede. Isso é feito usando algum protocolo baseado em SSL/TLS, sigla para os padrões Secure Socket Layer e Transport Layer Security \cite{naylor2014cost}. São exemplos o HTTPS, SMTPS, para troca de hipertexto e e-mail, respectivamente. Essa estratégia busca proteger as partes envolvidas de ataques contra o sigilo das mensagens, uma vez que o conteúdo interceptado de forma indevida durante o trânsito se torna inelegível para o atacante. Também torna computacionalmente complexo introduzir nas mensagens conteúdo não legítimo.
 
@@ -61,7 +64,7 @@ A criptografia assimétrica propõe um modelo de solução para este problema. Cada 
 
 O chaveiro criptográfico tem como funções a proteção das chaves privadas, a importação de chaves públicas alheias, revogação de chaves comprometidas e configuração do nível de confiança. Sendo a camada responsável por estas tarefas, está fortemente ligado à facilidade de uso das chaves pelo usuário final. O chaveiro desempenha a função crucial de proteção das chaves privadas por meio de senha. A solução adotada em implementações como o GnuPG cria um chaveiro na estação de trabalho do usuário durante a instalação, que pode então ser usado diretamente por meio de linha de comando ou acessado por através de bibliotecas específicas por softwares de terceiros.
 
-\section{USO DO PGP PARA CRIPTOGRAFIA} \label{sec:usopgpcripto}
+\section{Uso do PGP para Criptografia} \label{sec:usopgpcripto}
 
 PGP é uma família de softwares da área de segurança desenvolvidos inicialmente por Philip R. Zimmermann \cite{carmocriptografia} e liberada como um freeware em 1991. Essa liberação foi motivo de processos movidos pelo Governo dos Estados Unidos sob a acusação da ferir as leis de exportação de tecnologia criptográfica vigentes. O caso foi encerrado em 1996 sem prejuízo à Zimmermann \cite{zimmCaseDropped}.Foi então fundada a PGP Inc - mais tarde PGP Corp - com o objetivo de manter essa tecnologia. Esta empresa foi adquirida em 2010 pela Symantec e sua versão gratuita  deixou de ser oferecida.
 
@@ -78,24 +81,24 @@ Outro uso facilmente identificável é na assinatura de arquivos. Dado que uma ass
 
 GPG está disponível para todos os grandes sistemas operacionais, de estações desktop até celulares e várias bibliotecas permitem desenvolvimento sobre esta tecnologia.
 
-\section{AVALIAÇÃO DE FORMAS DE ACESSO AO CHAVEIRO PGP} \label{sec:avaliausochaveiropgp}
+\section{Avaliação de Formas de Acesso ao Chaveiro PGP} \label{sec:avaliausochaveiropgp}
 
 A seguir, são feitas avaliações de formas e metodologias de acesso aos chaveiros PGP, suas dependências e considerações a respeito da facilidade de uso pelo usuário final.
 
-\subsection{PGP - PRETTY GOOD PRIVACY}
+\subsection{PGP - Pretty Good Privacy}
 Hoje o PGP compõe a suite de soluções corporativas da Symantec servindo como opção de criptografia em seus produtos \cite{symantecWhiteKeepingDataSecure}. Tais produtos compõem um ecossistema de softwares com foco na centralização dos recursos privados, como as chaves dos usuários, o que tira do usuário individual a posse sobre a sua chave, sua ativação e desativação, em prol da facilidade para o administrador da infraestrutura corporativa.
 
 O fato de estas ferramentas somente estarem disponíveis dentro de uma grande suíte corporativa as torna financeiramente inacessíveis às aos indivíduos que desejam proteger suas comunicações e documentos digitais particulares. O fator financeiro, portanto, se torna uma barreira quanto à estes produtos. A adoção de ferramentas livres possivelmente terá mais potencial de adoção, visto o custo envolvido.
 
-\subsection{GNUPG}
+\subsection{GnuPG}
 
-O GNU PG é uma implementação da RFC4880 \cite{RFC4880}, entitulada OpenPGP Message Format, que permite a geração e uso das chaves privadas em interface de linha de comando. Essa é a principal implementação do formato em uso atualmente, vindo instalada por padrão em várias distribuições linux. Também está disponível para Microsoft Windows por meio da suite Gpg4win.
+O GnuPG é uma implementação da RFC4880 \cite{RFC4880}, entitulada OpenPGP Message Format, que permite a geração e uso das chaves privadas em interface de linha de comando. Essa é a principal implementação do formato em uso atualmente, vindo instalada por padrão em várias distribuições linux. Também está disponível para Microsoft Windows por meio da suite Gpg4win.
 
 Essa implementação é de interesse de quem deseja aprender com mais detalhes como se dá o uso das chaves, sua criação e as diferentes opções de configuração que estão disponíveis nas diversas operações previstas pela especificação. Isso pode ser visto na capacidade de suporte à diversos algoritmos de criptografia, como DSA, RSA, AES, 3DES, Blowfish, Twofish, CAST5, MD5, SHA-1, RIPE-MD-160 e TIGER. Também comporta a adição de novos algoritmos por meio de extensões personalizadas.
 
-\subsection{MOD\_AUTH\_OPENPGP E ENIGFORM}
+\subsection{Apache OpenPGP e Enigform}
 
-A extensão Enigform \cite{enigformMainPage} para firefox busca adicionar uma nova camada de segurança sobre as requisições HTTP assinando-as digitalmente com os recursos do chaveiro do usuário. O servidor então pode verificar a validade dessas assinaturas por meio do uso do seu próprio chaveiro, através da extensão mod\_auth\_openpgp \cite{modAuthMainPage}.
+A extensão Enigform \cite{enigformMainPage} para Mozilla Firefox busca adicionar uma nova camada de segurança sobre as requisições HTTP assinando-as digitalmente com os recursos do chaveiro do usuário. O servidor então pode verificar a validade dessas assinaturas por meio do uso do seu próprio chaveiro, através da extensão mod\_openpgp \cite{modAuthMainPage}.
 
 Isso provê uma capacidade de autenticação dentro da própria comunicação estabelecida entre a aplicação cliente e o servidor, já que requisições sem assinatura ou com assinaturas geradas por chaves desconhecidas seriam facilmente identificáveis e poderiam ser adequadamente tratadas.
 
@@ -105,17 +108,17 @@ O investimento neste tipo de estratégia tem potencial para uso em ferramentas de
 
 Um outro empecilho é a necessidade de instalação de um plugin em cada estação de trabalho, que obrigatoriamente deve ter o Mozilla Firefox. Essa ferramenta também depende de as chaves serem transportadas entre as estações pelo próprio usuário e disponibilizadas de forma correta em seus discos-rígidos.
 
-\subsection{ENIGMAIL}
-O Enigmail é um plugin desenvolvido para o cliente de e-mail Mozilla Thunderbird. Este plugin estende as capacidades do Thunderbird dando-lhe a capacidade de encriptar, desencriptar, assinar e verificar assinatura de e-mails. O recurso padrão para estas operações é o padrão PGP, através de uma implementação aberta, o GNU PG.
+\subsection{Enigmail}
+O Enigmail é um plugin desenvolvido para o cliente de e-mail Mozilla Thunderbird. Este plugin estende as capacidades do Thunderbird dando-lhe a capacidade de encriptar, desencriptar, assinar e verificar assinatura de e-mails. O recurso padrão para estas operações é o padrão PGP, através de uma implementação aberta, o GnuPG.
 
-Para correto funcionamento do Enigmail deve ser feita a instalação do chaveiro GNU PG e do Thunderbird. Em seguida, o chaveiro local deve ser configurado dentro do plugin. Depois disso é possível realizar as operações citadas com as mensagens, provendo sigilo e confirmação da autoria das mensagens, além de operações sobre o próprio chaveiro, como criação de novas chaves, importação de chaves públicas, modificação do nível de confiança atribuido à chaves públicas de terceiros.
+Para correto funcionamento do Enigmail deve ser feita a instalação do chaveiro GnuPG e do Thunderbird. Em seguida, o chaveiro local deve ser configurado dentro do plugin. Depois disso é possível realizar as operações citadas com as mensagens, provendo sigilo e confirmação da autoria das mensagens, além de operações sobre o próprio chaveiro, como criação de novas chaves, importação de chaves públicas, modificação do nível de confiança atribuido à chaves públicas de terceiros.
 
 O formato de uso do Enigmail é seguido por diversas outras ferramentas que buscam simplificar o uso da tecnologia PGP na comunicação, como o Evolution, Claws Mail e extensões como o WebPG para Firefox. Elas servem como clientes do chaveiro instalado localmente e traduzem as suas operações para uma interface gráfica familiar ao usuário.
 
 Um ponto comum de dificuldade entre todas elas é a necessidade de lidar com os chaveiros pelas múltiplas estações de trabalho, como notado na avaliação do Enigform na seção anterior.
 
 
-\section{AVALIAÇÃO DA EXPERIÊNCIA DE CHAVEIROS PGP} \label{sec:avaliaexperienciapgp}
+\section{Avaliação da Experiência de Chaveiros PGP} \label{sec:avaliaexperienciapgp}
 
 Todas as aplicações analisadas tinham em comum o uso de chaveiros instalados localmente, com as chaves fisicamente guardadas na pasta do usuário. Este modelo existe de forma tradicional e serve bem para usuários que operam de uma mesma estação para as suas atividades cotidianas e não precisam de mobilidade.
 
@@ -126,7 +129,7 @@ Além dessa dificuldade os serviços hospedados remotamente e disponibilizados atr
 Observando esta dificuldade, este trabalho propõe uma experiência com o chaveiro capaz de se tornar mais pessoal e, ao mesmo tempo, contribuir com a mobilidade desses recursos de segurança junto com o próprio deslocamento físico do usuário.
 
 
-\section{PROPOSTA DE CHAVEIRO PESSOAL MÓVEL VIA WEBSERVICE} \label{sec:proposta}
+\section{Proposta de Chaveiro Pessoal Móvel via Webservice} \label{sec:proposta}
 
 Neste trabalho propõe-se uma solução para este problema, dando ao usuário a capacidade de manter consigo o chaveiro PGP com seus recursos privados de criptografia e, ainda assim, ser capaz de utilizar tais recursos nas aplicações com as quais interage cotidianamente.
 
@@ -155,7 +158,7 @@ Abaixo uma representação simplificada da proposta, exibindo os principais elemen
 
 Nas subseções seguintes as operações experimentadas são detalhadas. Elas usam os headers HTTP para instruir o chaveiro no dispositivo a respeito da operação desejada. O corpo da requisição e das respostas contém a mensagem original e o resultado de tal operação. Nos exemplos abaixo o IP 192.168.1.100 pertence à um smartphone Moto XT1034 com Android 5 que contém uma instalação do Open KeyChain com chaves para os usuários representados por bob@email.com e alice@email.com. A chave privada padrão é a do usuário bob@email.com.
 
-\subsection{WEBSERVICE DE ENCRIPTAÇÃO E ASSINATURA DA MENSAGEM}
+\subsection{Webservice de Encriptação e Assinatura da Mensagem}
 
 Neste serviço é feita a assinatura da mensagem com a chave padrão escolhida no Open KeyChain e ela será criptografada com a chave pública adequada. O resultado da operação estará no corpo da resposta.
 
@@ -169,7 +172,7 @@ A operação usa uma requisição HTTP POST. O cabeçalho x-operation recebe o valor 
 \end{figure}
 
 
-\subsection{WEBSERVICE DE DESENCRIPTAÇÃO}
+\subsection{Webservice de Desencriptação}
 
 Neste serviço é feita a descriptografia da mensagem. Ela depende de o Open KeyChain possuir a chave privada que forma um par com a pública usada para encriptar. Neste exemplo a mensagem enviada para alice@email.com no passo anterior é desencriptada de volta para sua forma legível.
 A requisição deve usar o cabeçalho x-operation com o valor decrypt-message e o corpo da requisição deve conter a mensagem PGP em texto plano. O resultado é retornado no corpo da resposta, conforme imagem:

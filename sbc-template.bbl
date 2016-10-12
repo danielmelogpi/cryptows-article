@@ -26,6 +26,13 @@ Diffie, W. (1988).
 \newblock The first ten years of public-key cryptography.
 \newblock {\em Proceedings of the IEEE}, 76(5):560--577.
 
+\bibitem[Higa 2014]{whatsappCriptoSera}
+Higa, P. (2014).
+\newblock Whatsapp usa criptografia de ponta a ponta para suas mensagens no
+  android.
+\newblock \url{http://www.securiteam.com/tools/5HP0220LFU.html}.
+\newblock Accessado em: 2016-10-10.
+
 \bibitem[Lehtonen and Parssinen 2002]{lehtonen2002pattern}
 Lehtonen, S. and Parssinen, J. (2002).
 \newblock Pattern language for cryptographic key management.
