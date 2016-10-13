@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.9)  12 OCT 2016 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.9)  12 OCT 2016 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,15 +248,26 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 
+Underfull \hbox (badness 3049) in paragraph at lines 54--55
+[]\OT1/ptm/m/n/12 Apesar do uso de tais t[]ecnicas de seguran[]a ser con-hecido
+ h[]a muitos
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 54--55
+\OT1/ptm/m/n/12 [[]] ) - ele ainda []e de dif[]^^Pcil com-preens[]ao e uso para
+ usu[]arios fi-nais.
+ []
+
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Underfull \hbox (badness 1546) in paragraph at lines 70--71
 \OT1/ptm/m/n/12 a importa[][]ao de chaves p[]ublicas al-heias, revoga[][]ao de 
 chaves com-pro-meti-das e
  []
 
-[2] [3] [4] [5] [6] <diagramarede.png, id=26, 660.4675pt x 344.28625pt>
+[3] [4] [5] [6] <diagramarede.png, id=26, 660.4675pt x 344.28625pt>
 File: diagramarede.png Graphic file (type png)
 
 <use diagramarede.png>
@@ -273,29 +284,26 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
  [7 <./diagramarede.png>] <encript.png, id=34, 595.22375pt x 469.755pt>
 File: encript.png Graphic file (type png)
  <use encript.png>
-Package pdftex.def Info: encript.png used on input line 179.
+Package pdftex.def Info: encript.png used on input line 181.
 (pdftex.def)             Requested size: 384.1096pt x 303.14377pt.
-
-<decript.png, id=35, 442.65375pt x 371.13657pt>
+ [8 <./encript.png>] <decript.png, id=39, 442.65375pt x 371.13657pt>
 File: decript.png Graphic file (type png)
  <use decript.png>
-Package pdftex.def Info: decript.png used on input line 196.
+Package pdftex.def Info: decript.png used on input line 198.
 (pdftex.def)             Requested size: 384.1096pt x 322.07071pt.
- [8 <./encript.png>] <senha-alice.png, id=40, 339.2675pt x 418.56375pt>
-File: senha-alice.png Graphic file (type png)
 
-<use senha-alice.png>
-Package pdftex.def Info: senha-alice.png used on input line 205.
+<senha-alice.png, id=40, 339.2675pt x 418.56375pt>
+File: senha-alice.png Graphic file (type png)
+ <use senha-alice.png>
+Package pdftex.def Info: senha-alice.png used on input line 207.
 (pdftex.def)             Requested size: 213.39568pt x 263.26863pt.
- [9 <./decript.png> <./senha-alice.png>]
-(./sbc-template.bbl
+
+[9 <./decript.png>] [10 <./senha-alice.png>] (./sbc-template.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 12.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-[10
-
-]
 Underfull \hbox (badness 2521) in paragraph at lines 72--77
 \OT1/pcr/m/n/12 com / security / 3-[]pillars-[]information-[]security$\OT1/ptm/
 m/n/12 .  Ac-ces-sado em:
@@ -319,26 +327,27 @@ Underfull \hbox (badness 2922) in paragraph at lines 92--97
 echnology / 2014 / nov / 19 /
  []
 
-) [11] (./sbc-template.aux) ) 
+[11]) [12] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
  2745 strings out of 494929
  39096 string characters out of 6180142
- 105437 words of memory out of 5000000
+ 105438 words of memory out of 5000000
  5986 multiletter control sequences out of 15000+600000
  20526 words of font info for 43 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,28p,795b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (11 pages, 274543 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips
+/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on sbc-template.pdf (12 pages, 276114 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
