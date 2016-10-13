@@ -30,11 +30,11 @@
 \maketitle
 
 \begin{abstract}
-  Encryption is a technique well known by experienced software users, but little known among others. The development of tools and techniques have not been sufficient to ensure its adoption by large groups of users. This is due largely to the difficulty of using these tools. In this work we evaluated the encryption adoption scenario and propose a model that can contribute to the end-user experience using mobile devices as facilitators of the experiences related to the security of communication that use this technology.
+  Although the encryption be known for many years the development of tools and techniques have not been sufficient to ensure its adoption by large groups of users. In this paper we propose the use of web services capable of offering encryption capabilities from mobile devices, offering an alternative so the end user can perform transport and management of its security features with more simplicity. This approach also aims to facilitate the integration with other tools that want to use such resources. These capabilities are developed maintaining the end user in total control of  his cryptography resources.
 \end{abstract}
 
 \begin{resumo}
-  A criptografia é uma técnica muito conhecida por usuários de software mais experientes, mas pouco difundida dentre os demais. O desenvolvimento das ferramentas e técnicas não tem sido suficiente para assegurar a sua adoção por grandes grupos de usuários. Isso se deve, em grande parte, à dificuldade de uso dessas ferramentas. Neste trabalho avaliamos o cenário de adoção da criptografia e propomos um modelo mais próximo da experiência do usuário final, utilizando dispositivos móveis como facilitadores das experiências ligadas à segurança da comunicação que usam essa tecnologia.
+  Apesar de a criptografia ser conhecida há muitos anos o desenvolvimento das ferramentas e técnicas não tem sido suficiente para assegurar a sua adoção por grandes grupos de usuários. Neste trabalho propomos o uso de web services capazes de oferecer recursos de criptografia a partir de dispositivos móveis, oferecendo uma alternativa para que o usuário final possa realizar o transporte e a gestão de seus recursos de segurança com mais simplicidade. Essa abordagem também busca facilitar a integração à outras ferramentas que desejem usar tais recursos. Essas capacidades são desenvolvidas mantendo o controle dos recursos criptográficos com o usuário final.
 \end{resumo}
 
 
@@ -49,7 +49,7 @@ A criptografia é um recurso que permite mascarar uma mensagem de tal forma que s
 
 Apesar do uso de tais técnicas de segurança ser conhecido há muitos anos \cite{pastPresentFutureCripto} (com  a criptografia assimétrica sendo conhecida desde 1975 \cite{diffie1988first} ) - ele ainda é de difícil compreensão e uso para usuários finais. Visto que a facilidade de uso precede uma adoção em massa de qualquer tecnologia \cite{sweikata2009usability}, existe necessidade de desenvolver formas mais simples de uso para potencializar ações de segurança da informação.
 
-Este artigo faz uma análise do uso atual de criptografia de chaves assimétricas utilizando o software GnuPG, que segue o padrão PGP, para troca de mensagens em ferramentas com recursos de criptografia. Propõe-se em seguida a implementação de uma carteira criptográfica em dispositivo móvel que ofereça facilidade de gestão dos recursos de segurança. Tal carteira será dotada de \textbf{web services} criptográficos para que aplicações que desejem fazer uso desses recursos possam fazê-lo. O objetivo principal é simplificar seu uso pelo usuário final e potencializar o uso de criptografia fim a fim.
+Este artigo faz uma análise do uso atual de criptografia de chaves assimétricas utilizando o software GnuPG, que segue o padrão PGP, para troca de mensagens em ferramentas com recursos de criptografia. Propõe-se em seguida a implementação de uma carteira criptográfica em dispositivo móvel que ofereça facilidade de gestão dos recursos de segurança. Tal carteira será dotada de \textbf{web services} criptográficos para que aplicações que desejem fazer uso desses recursos possam fazê-lo. Neste trabalho, procuramos oferecer uma solução de acesso simples via \textbf{web services} à carteira criptográfica em dispositivo móvel, afim de que aplicações diversas possam consumi-lo e assim facilitar o uso da criptografia por usuários finais.
 
 \section{Desafios da Criptografia Fim a Fim} \label{sec:limitsemcriptofimafim}
 
@@ -67,7 +67,7 @@ Outro componente essencial na criptografia fim a fim é a proteção das chaves pri
 
 \section{Uso do PGP para Criptografia} \label{sec:usopgpcripto}
 
-PGP é uma família de softwares da área de segurança desenvolvidos inicialmente por Philip R. Zimmermann \cite{carmocriptografia} e liberada como um freeware em 1991. Essa liberação foi motivo de processos movidos pelo Governo dos Estados Unidos sob a acusação da ferir as leis de exportação de tecnologia criptográfica vigentes. O caso foi encerrado em 1996 sem prejuízo à Zimmermann \cite{zimmCaseDropped}.Foi então fundada a PGP Inc - mais tarde PGP Corp - com o objetivo de manter essa tecnologia. Esta empresa foi adquirida em 2010 pela Symantec e sua versão gratuita  deixou de ser oferecida.
+PGP é uma família de softwares da área de segurança desenvolvidos inicialmente por Philip R. Zimmermann \cite{carmocriptografia} e liberada como um freeware em 1991. Essa liberação foi motivo de processos movidos pelo Governo dos Estados Unidos sob a acusação da ferir as leis de exportação de tecnologia criptográfica vigentes. O caso foi encerrado em 1996 sem prejuízo à Zimmermann \cite{zimmCaseDropped}. Foi então fundada a PGP Inc - mais tarde PGP Corp - com o objetivo de manter essa tecnologia. Esta empresa foi adquirida em 2010 pela Symantec e sua versão gratuita  deixou de ser oferecida.
 
 Tendo como base esta experiência foi desenvolvido o padrão OpenPGP, que contém a mesma proposta de criptografia por meio de chaves assimétricas, uma pública e outra privada, mas agora com uma especificação publicada na RFC 4880 - OpenPGP Message Format. A publicação desta especificação permitiu o nascimento de implementações abertas. A mais conhecida para desktop é o GnuPG, ou simplesmente GPG, tanto que, por vezes, os termos PGP e GPG são usados de forma intercambiável.
 
@@ -125,8 +125,6 @@ Todas as aplicações analisadas tinham em comum o uso de chaveiros instalados loc
 
 A experiência de software contemporânea, entretanto, tem mudado. Com a adoção de computadores em vários ambientes visitados ao longo do dia e o uso crescente de dispositivos móveis nos últimos anos ficou ainda mais complexa a manutenção do chaveiro pessoal. Uma tecnologia que já não via grande adoção sofre agora com mais uma barreira de uso para o usuário final.
 
-Além dessa dificuldade os serviços hospedados remotamente e disponibilizados através do navegador não conseguem acessar o chaveiro GPG do usuário. Essas aplicações remotas são uma parte essencial da experiência informatizada das pessoas e deveriam gozar dos mesmo nível de proteção dados à mensagens de e-mail tradicionais.
-
 Observando esta dificuldade, este trabalho propõe uma experiência com o chaveiro capaz de se tornar mais pessoal e, ao mesmo tempo, contribuir com a mobilidade desses recursos de segurança junto com o próprio deslocamento físico do usuário.
 
 
@@ -134,7 +132,7 @@ Observando esta dificuldade, este trabalho propõe uma experiência com o chaveiro
 
 Neste trabalho propõe-se uma solução para este problema, dando ao usuário a capacidade de manter consigo o chaveiro PGP com seus recursos privados de criptografia e, ainda assim, ser capaz de utilizar tais recursos nas aplicações com as quais interage cotidianamente.
 
-Isso pode ser conseguido utilizando o dispositivo móvel pessoal do usuário - seu \emph{smartphone} - como recipiente físico das chaves, comportando a implementação do chaveiro. Isso traz uma melhoria na gestão desses recursos, visto que a rotina do usuário já comporta o transporte e a guarda deste aparelho e já conta com camadas de proteção, como a senha pessoal, criptografia de disco oferecida por alguns sistemas operacionais móveis e a senha do próprio chaveiro, análoga a sua versão para desktop.
+Isso pode ser conseguido utilizando o dispositivo móvel pessoal do usuário - seu \emph{smartphone} - como recipiente físico das chaves, comportando a implementação do chaveiro. Isso traz uma melhoria na gestão desses recursos, visto que a rotina do usuário já comporta o transporte e a guarda deste aparelho e já conta com camadas de proteção, como a senha pessoal, criptografia de disco oferecida por alguns sistemas operacionais móveis e a senha do próprio chaveiro, análoga à sua versão para desktop.
 
 Propostas que usam recursos de criptografia já existem. Um exemplo citado anteriormente é o do Whatsapp \cite{whatsappCriptoSera}, que afirma ter implementado criptografia fim a fim. Não se conhece, entretanto, detalhes da implementação da ferramenta o que impossibilita avaliações mais detalhadas. Apesar disso o formato adotado pelo Whatsapp é simples de usar: ao indicar nas configurações da conversa que deseja usar a criptografia, ela é sinalizada como ativa e o usuário é alertado que somente ele e seu par podem ler as mensagens. Do ponto de vista da usabilidade essa técnica é muito bem desenvolvida. Não permite, porém, que aplicações diferentes usem os serviços de criptografia que servem a ferramenta de mensagens.
 
@@ -142,7 +140,7 @@ Também existem propostas baseadas em troca de chaves utilizando um servidor de c
 
 Para que aplicações de terceiros consigam realizar as operações necessárias, como criptografar, assinar, descriptografar e verificar assinatura é necessário um canal de comunicação para que as aplicações localizadas nas estações de trabalho possam acessar o chaveiro e fazer uso dos recursos criptográficos agora enclausurados no dispositivo móvel. Para este fim, é proposta neste artigo uma camada de serviço implementando estas operações como \textbf{web services}.
 
-A principal vantagem do uso de \textbf{web services} baseados em HTTP é a simplicidade de uso por parte das aplicações clientes. Como este é um protocolo conhecido o desenvolvedor do cliente poderá usar bibliotecas já testadas para a sua linguagem de escolha. Isso contrasta com protocolos especializados ou mesmo de natureza proprietária, que podem limitar quantidade de bibliotecas disponíveis para os desenvolvedores.
+A principal vantagem do uso de \textbf{web services} baseados em HTTP é a simplicidade de uso por parte das aplicações clientes. Como este é um protocolo conhecido o desenvolvedor do cliente poderá usar bibliotecas já testadas para a sua linguagem de escolha. Isso contrasta com protocolos especializados ou mesmo de natureza proprietária.
 
 Usando chamadas remotas de \textbf{web service} será possível fazer uso dos recursos independente de uma instalação na máquina cliente dedicada à manipulação das chaves conhecidas, mantendo todo o arcabouço de segurança de interesse do usuário centralizado em seu dispositivo. Com esta ação busca-se uma possível solução para o problema de gestão de chaves e da complexidade de transporte de forma segura delas pelos ambientes heterogêneos onde o usuário precisará de proteção.
 
@@ -213,27 +211,17 @@ Para que a operação de desencriptação ocorra é necessário possuir no chaveiro a 
 \end{figure}
 \FloatBarrier
 
-\section{Considerações}
-
-A proposta de \textbf{web services} expondo um chaveiro PGP em dispositivo móvel busca resolver alguns casos de uso de criptografia na operação cotidiana do usuário final. Assim como todas as soluções existentes hoje, não seria possível aplicá-la em todos os cenários onde criptografia por chave assimétrica é utilizada atualmente.
+\section{Trabalhos Futuros}
 
 Um possível ponto de trabalhos futuros está no estudo do uso prático desta técnica em diferentes tipos, topologias de rede e meios de transmissão, como bluetooth, NFC ou outras tecnologias de transmissão de dados. Também é ponto de experimento futuro verificar, dentro da diversidade de cenários em que uma mensagem precisa ser protegida, quais encontram na proposta deste trabalho o melhor caso de aplicação.
 
-A proposta iniciada pelo projeto Enigform é de interesse particular para o tema deste trabalho. A facilidade de uso introduzida pela adição de assinatura nas requisições HTTP tem grande potencial para simplificar o uso de criptografia pelo usuário e existe espaço para que a proposta do uso desta técnica em conjunto com a proposta de PGP por meio de \textbf{web services} aqui apresentada seja desenvolvida e evoluida.
+Para efeito de prova de conceito, foram disponibilizadas somente duas primitivas de acesso aos serviços do chaveiro criptográfico. Outros serviços como assinatura de mensagens e gestão de chaves criptográficas tornaria o projeto mais completo e útil para os seus aplicativos clientes.
 
+A proposta iniciada pelo projeto Enigform é de interesse particular para o tema deste trabalho. A facilidade de uso introduzida pela adição de assinatura nas requisições HTTP tem grande potencial para simplificar o uso de criptografia pelo usuário e existe espaço para que a proposta do uso desta técnica em conjunto com a proposta de PGP por meio de  web services aqui apresentada seja desenvolvida e evoluída.
 
 \section{Conclusão}
 
-A importância da criptografia cresce de forma proporcional à comunicação humana por meios digitais. Ela está associada à conceitos como identidade, e direitos como da liberdade de expressão e do sigilo da comunicação. Com isto em mente fica clara a necessidade do desenvolvimento de sistemas de informação que sejam altamente seguros e, ao mesmo tempo, que se integrem ao cotidiano do usuário. A simplicidade do uso deve ser estimulada em conjunto com o desenvolvimento de novas técnicas e ferramentas de segurança. Isso contribuirá com a adoção de práticas seguras pelos usuários dos sistemas de informação e, por consequência, com a segurança e privacidade de todos os envolvidos.
-
-
-% Bibliographic references must be unambiguous and uniform.  We recommend giving
-% the author names references in brackets, e.g. \cite{knuth:84},
-% \cite{boulic:91}, and \cite{smith:99} and \cite{kamell:06} and \cite{WinNT}.
-%
-% The references must be listed using 12 point font size, with 6 points of space
-% before each reference. The first line of each reference should not be
-% indented, while the subsequent should be indented by 0.5 cm.
+Neste artigo foi proposto um modelo de \textbf{web services} para disponibilizar os serviços de um chaveiro PGP em dispositivo móvel. O modelo demonstrou ser viável para o uso de criptografia fim a fim para aplicações para o usuário final, contribuindo com sua facilidade de uso e mobilidade.
 
 \renewcommand{\refname}{Referências}
 \bibliographystyle{sbc}
